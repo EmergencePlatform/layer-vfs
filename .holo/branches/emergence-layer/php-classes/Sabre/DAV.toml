@@ -1,0 +1,4 @@
+[holomapping]
+holosource = "sabre-dav"
+root = "lib/Sabre/DAV"
+files = "**/*.php"

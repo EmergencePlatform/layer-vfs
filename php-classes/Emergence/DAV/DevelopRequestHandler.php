@@ -5,14 +5,14 @@ namespace Emergence\DAV;
 use Site;
 use User;
 use UserSession;
-use RequestHandler;
-use Sencha_App;
+
+use Emergence\WebApps\SenchaApp;
 
 use Sabre\DAV\Server;
 use Sabre\DAV\TemporaryFileFilterPlugin;
 use Sabre\DAV\Mount\Plugin AS MountPlugin;
 
-class DevelopRequestHandler extends \RequestHandler
+class DevelopRequestHandler extends \Emergence\Site\RequestHandler
 {
     public static $userClass = User::class;
 
@@ -70,11 +70,7 @@ class DevelopRequestHandler extends \RequestHandler
 
         // handle /develop request
         if ($_SERVER['REQUEST_METHOD'] == 'GET' && static::getResponseMode() == 'html' && !static::peekPath()) {
-            RequestHandler::respond('app/ext', array(
-                'App' => Sencha_App::getByName('EmergenceEditor')
-                ,'mode' => 'production'
-                ,'title' => 'EmergenceEditor'
-            ));
+            return static::sendResponse(SenchaApp::load('EmergenceEditor')->render(), 'webapps');
         }
 
         // initial and configure SabreDAV

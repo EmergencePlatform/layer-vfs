@@ -308,7 +308,10 @@
     "development": {
         "watch": {
             "delay": 250
-        }
+        },
+        "tags": [
+            "fashion"
+        ]
     },
 
     /**

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+hab pkg install --binlink jarvus/sencha-cmd
+
+pushd "/src/sencha-workspace/EmergenceEditor" > /dev/null
+sencha app watch
+popd > /dev/null

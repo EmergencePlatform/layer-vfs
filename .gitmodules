@@ -1,0 +1,4 @@
+[submodule "ext"]
+	path = sencha-workspace/ext
+	url = https://github.com/JarvusInnovations/extjs.git
+	branch = workspace/6.2

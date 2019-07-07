@@ -1,2 +1,6 @@
 [holomapping]
-files = "*/**"
+files = [
+    "*/**",
+    "!sencha-workspace/ext",
+    "!sencha-workspace/packages.remote/*"
+]

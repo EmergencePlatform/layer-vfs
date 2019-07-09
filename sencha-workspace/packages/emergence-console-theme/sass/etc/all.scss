@@ -9,3 +9,11 @@ $fg-color3: #fff;
 
 $bg-highlight: lighten($bg-color1, 20%);
 $fg-highlight: darken($fg-color2, 20%);
+
+::-webkit-scrollbar             { height: .5rem; width: .5rem; }
+::-webkit-scrollbar-button      { background-color: $bg-highlight; }
+::-webkit-scrollbar-track       { background-color: $bg-highlight; }
+::-webkit-scrollbar-track-piece { background-color: $bg-color1; }
+::-webkit-scrollbar-thumb       { background-color: $bg-highlight; }
+::-webkit-scrollbar-corner      { background-color: $bg-highlight; }
+::-webkit-resizer               { background-color: $bg-highlight; }

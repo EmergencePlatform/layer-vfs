@@ -7,9 +7,13 @@
 .emergence-tabpanel {
     .x-tab.is-dirty {
         .x-tab-inner:after {
+            color: $base-color;
             content: '\f111';
             font-family: FontAwesome;
-            margin-left: .5em;
+            font-size: .5em;
+            line-height: 1;
+            margin-left: 1.5em;
+            vertical-align: .375em;
         }
 
         &.is-saving .x-tab-inner:after {

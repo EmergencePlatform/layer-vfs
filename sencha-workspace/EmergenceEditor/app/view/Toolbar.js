@@ -30,7 +30,9 @@ Ext.define('EmergenceEditor.view.Toolbar', {
                     xtype: 'form',
                     itemId: 'searchForm',
                     bodyPadding: 10,
+                    width: 240,
                     defaults: {
+                        anchor: '100%',
                         labelAlign: 'top'
                     },
                     items: [
@@ -77,7 +79,12 @@ Ext.define('EmergenceEditor.view.Toolbar', {
                         {
                             xtype: 'button',
                             action: 'reset',
-                            text: 'Reset'
+                            text: 'Reset',
+                            ui: 'default-toolbar'
+                        },
+                        {
+                            xtype: 'component',
+                            flex: 1
                         },
                         {
                             xtype: 'button',

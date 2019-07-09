@@ -4,4 +4,9 @@
     background-repeat: no-repeat;
     background-position: $loadmask-msg-inner-icon-position;
     background-size: 50px 50px;
+    font-size: .875rem;
+    letter-spacing: .05em;
+    padding-right: 15%; // visually center the image
+    text-shadow: 0 1px 1px black;
+    text-transform: uppercase;
 }

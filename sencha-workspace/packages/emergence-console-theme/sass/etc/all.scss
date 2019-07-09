@@ -17,3 +17,12 @@ $fg-highlight: darken($fg-color2, 20%);
 ::-webkit-scrollbar-thumb       { background-color: $bg-highlight; }
 ::-webkit-scrollbar-corner      { background-color: $bg-highlight; }
 ::-webkit-resizer               { background-color: $bg-highlight; }
+
+.x-fa,
+.x-tree-icon,
+.x-tree-checkbox,
+.x-tree-elbow-img,
+.x-form-checkbox-default {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}

@@ -12,7 +12,7 @@ Ext.define('EmergenceEditor.view.Toolbar', {
         {
             action: 'save',
             text: 'Save',
-            iconCls: 'x-fa fa-floppy-o',
+            iconCls: 'x-fa fa-save', // tempting to change to fa-cloud-upload...
             tooltip: 'Save current editor (Ctrl+s)'
         },
         {

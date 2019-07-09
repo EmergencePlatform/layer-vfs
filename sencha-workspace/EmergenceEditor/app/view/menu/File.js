@@ -19,27 +19,27 @@ Ext.define('EmergenceEditor.view.menu.File', {
         {
             text: 'Edit',
             action: 'edit',
-            iconCls: 'x-fa fa-file-text-o',
+            iconCls: 'x-fa fa-pencil',
             href: '#'
         },
         {
             text: 'Open via Browser',
             action: 'open-file',
-            iconCls: 'x-fa fa-file-o',
+            iconCls: 'x-fa fa-external-link',
             hrefTarget: '_blank',
             href: '#'
         },
         {
             text: 'Open via Site',
             action: 'open-url',
-            iconCls: 'x-fa fa-external-link',
+            iconCls: 'x-fa fa-globe',
             hrefTarget: '_blank',
             href: '#'
         },
         {
             text: 'Rename',
             action: 'rename',
-            iconCls: 'x-fa fa-pencil'
+            iconCls: 'x-fa fa-i-cursor'
         },
         {
             text: 'Delete',

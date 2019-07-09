@@ -2,7 +2,8 @@ $base-color: dynamic($fg-color1);
 $color: dynamic($fg-color2);
 $body-background-color: dynamic($bg-color3);
 
-$enable-font-smoothing: dynamic(true);
+$font-family: dynamic(-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+$enable-font-smoothing: dynamic(false);
 
 a {
     color: rgba($fg-color3, 0.9);

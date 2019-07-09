@@ -130,8 +130,14 @@ Ext.define('EmergenceEditor.controller.Editors', {
     },
 
     onEditorDirtyChange: function(editorTab, dirty) {
+        var tabs = editorTab.ownerCt;
+
         editorTab.tab.toggleCls('is-dirty', dirty);
         this.getSaveBtn().setDisabled(!dirty);
+
+        if (tabs) {
+            tabs.updateLayout();
+        }
     },
 
     onSaveBtnClick: function() {

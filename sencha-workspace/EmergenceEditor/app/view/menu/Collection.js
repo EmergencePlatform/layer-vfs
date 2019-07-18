@@ -11,7 +11,7 @@ Ext.define('EmergenceEditor.view.menu.Collection', {
         {
             text: 'New File',
             action: 'new-file',
-            iconCls: 'x-fa fa-file'
+            iconCls: 'x-fa fa-file-o'
         },
         {
             text: 'New Collection',
@@ -26,7 +26,7 @@ Ext.define('EmergenceEditor.view.menu.Collection', {
         {
             text: 'Rename',
             action: 'rename',
-            iconCls: 'x-fa fa-pencil'
+            iconCls: 'x-fa fa-i-cursor'
         },
         {
             text: 'Delete',

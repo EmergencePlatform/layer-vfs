@@ -8,7 +8,9 @@ Ext.define('EmergenceEditor.view.FilesystemTree', {
         'Ext.form.field.Text'
     ],
 
+    componentCls: 'emergence-filesystemtree',
 
+    header: false,
     title: 'Filesystem',
     stateId: 'editor-filesystemtree',
     stateful: {
@@ -28,6 +30,7 @@ Ext.define('EmergenceEditor.view.FilesystemTree', {
         mode: 'MULTI'
     },
     viewConfig: {
+        componentCls: 'emergence-filesystemtree-view',
         loadMask: false,
         plugins: {
             ptype: 'treeviewdragdrop',

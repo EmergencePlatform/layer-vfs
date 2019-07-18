@@ -11,7 +11,6 @@
     }
 
     .feed-ct {
-        border-top: 1px solid $fg-color3;
         display: table;
         width: 100%;
     }
@@ -28,15 +27,12 @@
         }
 
         &:nth-child(even) {
-            background: $bg-color3;
+            background: mix($bg-color2, $bg-color3);
         }
 
         &:hover {
-            background: rgba($base-color, .75);
-            background: -webkit-linear-gradient(
-                rgba($base-color, .90),
-                rgba($base-color, .75)
-            );
+            background: rgba($base-color, .35);
+            background: linear-gradient(rgba($base-color, .4), rgba($base-color, .3));
 
             .compare {
                 text-decoration: none;
@@ -85,7 +81,7 @@
     .action {
         &.deleted { color: hsl(0, 80%, 65%); }
         &.edited  { color: hsl(212, 80%, 65%); }
-        &.created { color: hsl(105, 100%, 55%); }
+        &.created { color: hsl(105, 80%, 65%); }
     }
 
     code {
@@ -116,7 +112,7 @@
     }
 
     .compare {
-        border: 1px solid rgba($fg-color3, .75);
+        border: 1px solid rgba($fg-color3, .3);
         border-radius: 1em;
         color: rgba($fg-color3, .90);
         margin-left: 1em;
@@ -128,7 +124,8 @@
         }
 
         &:active {
-            background: rgba($fg-color3, .25);
+            background-color: rgba($base-color, .3);
+            border-color: $base-color;
         }
     }
 }

@@ -19,27 +19,27 @@ Ext.define('EmergenceEditor.view.menu.File', {
         {
             text: 'Edit',
             action: 'edit',
-            iconCls: 'x-fa fa-file-text-o',
+            iconCls: 'x-fa fa-pencil',
             href: '#'
         },
         {
             text: 'Open via Browser',
             action: 'open-file',
-            iconCls: 'x-fa fa-file-o',
+            iconCls: 'x-fa fa-external-link',
             hrefTarget: '_blank',
             href: '#'
         },
         {
             text: 'Open via Site',
             action: 'open-url',
-            iconCls: 'x-fa fa-external-link',
+            iconCls: 'x-fa fa-globe',
             hrefTarget: '_blank',
             href: '#'
         },
         {
             text: 'Rename',
             action: 'rename',
-            iconCls: 'x-fa fa-pencil'
+            iconCls: 'x-fa fa-i-cursor'
         },
         {
             text: 'Delete',
@@ -54,25 +54,26 @@ Ext.define('EmergenceEditor.view.menu.File', {
 
             xtype: 'component',
             autoEl: 'table',
+            cls: 'attributes-table',
             tpl: [
                 '<tr>',
-                '    <th align="right">ID</th>',
+                '    <th>ID</th>',
                 '    <td>{ID}</td>',
                 '</tr>',
                 '<tr>',
-                '    <th align="right">Timestamp</th>',
+                '    <th>Modified</th>',
                 '    <td>{Timestamp:date("Y-m-d H:i:s")}</td>',
                 '</tr>',
                 '<tr>',
-                '    <th align="right">Size</th>',
+                '    <th>Size</th>',
                 '    <td>{Size:number("0,000")} bytes</td>',
                 '</tr>',
                 '<tr>',
-                '    <th align="right">Hash</th>',
+                '    <th>Hash</th>',
                 '    <td>{SHA1:substr(0,8)}</td>',
                 '</tr>',
                 '<tr>',
-                '    <th align="right">Type</th>',
+                '    <th>Type</th>',
                 '    <td>{Type}</td>',
                 '</tr>'
             ]

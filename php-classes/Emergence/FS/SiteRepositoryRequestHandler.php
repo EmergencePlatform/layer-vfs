@@ -21,6 +21,6 @@ class SiteRepositoryRequestHandler extends \RequestHandler
         $repo->synchronize();
 
         // continue with generic repository request
-        return HttpBackend::handleRepositoryRequest($repo);
+        return HttpBackend::handleRepositoryRequest($repo, static::getPath());
     }
 }

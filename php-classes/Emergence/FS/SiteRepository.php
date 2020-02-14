@@ -6,9 +6,9 @@ use DB;
 use Emergence\Git\File;
 use Emergence\Git\Repository;
 use Emergence\Git\Tree;
-use Emergence\People\User;
 use Site;
 use SiteFile;
+use User;
 
 class SiteRepository extends Repository
 {

@@ -139,7 +139,7 @@ class SiteRepository extends Repository
                     // skip change if a higher-priority layer has content
                     foreach ($layerOrders as $otherLayerName => $otherLayerOrder) {
                         if (
-                            ($otherLayerOrder > $layerOrder) &&
+                            ($otherLayerOrder < $layerOrder) &&
                             ($layerTrees[$otherLayerName]->hasPath($changePath))
                         ) {
                             continue 2;

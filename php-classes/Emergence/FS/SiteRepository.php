@@ -190,7 +190,7 @@ class SiteRepository extends Repository
                     $masterCommit = $this->writeCommit(Tree::EMPTY_TREE_HASH, [
                         'author' => $authorInfo,
                         'date' => $commit['date'],
-                        'message' => "Initialize composite",
+                        'message' => 'Initialize composite',
                     ]);
                 }
 

@@ -164,9 +164,17 @@ class SiteRepository extends Repository
                     $commit['index']
                 );
 
+                // initialize layer commit
+                if (!$layerCommit) {
+                    $layerCommit = $this->writeCommit(Tree::EMPTY_TREE_HASH, [
+                        'author' => $authorInfo,
+                        'date' => $commit['date'],
+                        'message' => "Initialize layer {$commit['layer']}",
+                    ]);
+                }
+
                 // write new commit for layer
                 $layerTree->write();
-
                 $layerCommit = $this->writeCommit($layerTree->getHash(), [
                     'branch' => $commit['layer'],
                     'parent' => $layerCommit,
@@ -177,21 +185,24 @@ class SiteRepository extends Repository
 
                 $layerCommits[$commit['layer']] = $layerCommit;
 
-                // write new commit for master
-                $masterTree->write();
-
-                if ($masterCommit) {
-                    $masterCommit = $this->writeCommit($masterTree->getHash(), [
-                        'branch' => 'master',
-                        'parent' => [$masterCommit, $layerCommit],
+                // initialize master commit
+                if (!$masterCommit) {
+                    $masterCommit = $this->writeCommit(Tree::EMPTY_TREE_HASH, [
                         'author' => $authorInfo,
                         'date' => $commit['date'],
-                        'message' => $message,
+                        'message' => "Initialize composite",
                     ]);
-                } else {
-                    $this->run('branch', ['-f', 'master', $layerCommit]);
-                    $masterCommit = $layerCommit;
                 }
+
+                // write new commit for master
+                $masterTree->write();
+                $masterCommit = $this->writeCommit($masterTree->getHash(), [
+                    'branch' => 'master',
+                    'parent' => [$masterCommit, $layerCommit],
+                    'author' => $authorInfo,
+                    'date' => $commit['date'],
+                    'message' => $message,
+                ]);
 
                 $masterIndex = $commit['index'];
 
